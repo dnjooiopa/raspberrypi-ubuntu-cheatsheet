@@ -35,7 +35,12 @@ sudo pip3 install docker-compose
 sudo reboot
 ```
 
+### NVM
+```sh
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
+source ~/.profile
+```
 
 
 

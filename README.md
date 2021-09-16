@@ -43,6 +43,8 @@ source ~/.profile
 
 ### NGINX ngx_http_js_module
 ```sh
+#! Required nginx installed on system.
+
 sudo apt-get update
 sudo apt-get install build-essential
 sudo apt-get install libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev

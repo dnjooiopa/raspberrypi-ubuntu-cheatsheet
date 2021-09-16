@@ -41,7 +41,7 @@ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.profile
 ```
 
-### NGINX ngx_http_js_module
+### NGINX ngx_http_js_module (dynamic module)
 ```sh
 #! Required nginx installed on system.
 

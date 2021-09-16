@@ -41,6 +41,27 @@ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.profile
 ```
 
+### NGINX ngx_http_js_module
+```sh
+sudo apt-get update
+sudo apt-get install build-essential
+sudo apt-get install libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev
+
+# njs version must match nginx version
+wget http://nginx.org/download/nginx-1.18.0.tar.gz
+tar -zxvf nginx-1.18.0.tar.gz
+
+sudo apt-get install mercurial
+hg clone http://hg.nginx.org/njs
+
+cd nginx-1.18.0
+sudo ./configure --with-compat --add-dynamic-module=../njs/nginx
+sudo make modules
+sudo cp objs/ngx_http_js_module.so /usr/share/nginx/modules
+
+# Add "load_module modules/ngx_http_js_module.so" in /etc/nginx/nginx.conf
+```
+
 
 
 

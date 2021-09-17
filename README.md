@@ -47,7 +47,7 @@ source ~/.profile
 
 sudo apt-get update
 sudo apt-get install build-essential
-sudo apt-get install libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev
+sudo apt-get install -y libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev
 
 # njs version must match nginx version
 wget http://nginx.org/download/nginx-1.18.0.tar.gz

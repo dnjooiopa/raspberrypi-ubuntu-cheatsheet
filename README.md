@@ -65,7 +65,13 @@ sudo cp objs/ngx_http_js_module.so /usr/share/nginx/modules
 ```
 
 
+### Update Tag
 
+```text
+git tag -a <<version>> -m "<<comment>>"
+
+git push --tags
+```
 
 
 

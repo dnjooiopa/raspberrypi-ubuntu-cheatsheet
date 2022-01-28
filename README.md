@@ -27,7 +27,7 @@ sudo usermod -aG docker ${USER}
 sudo reboot
 
 # Docker compose
-sudo apt install python3-pip
+sudo apt -y install python3-pip
 
 sudo pip3 install docker-compose
 

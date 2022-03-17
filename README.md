@@ -8,21 +8,13 @@ paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/ther
 ### Docker installation ([reference](https://brjapon.medium.com/setting-up-ubuntu-20-04-arm-64-under-raspberry-pi-4-970654d12696))
 ```sh
 # Docker CE
-sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+sudo apt-get update && sudo apt-get upgrade
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-sudo apt-key fingerprint 0EBFCD88
-
-sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-
-sudo apt-get update
-
-apt-cache policy docker-ce
-
-sudo apt-get -y install docker-ce
+curl -sSL https://get.docker.com | sh
 
 sudo usermod -aG docker ${USER}
+
+sudo systemctl enable docker
 
 sudo reboot
 
